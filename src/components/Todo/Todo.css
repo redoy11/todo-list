@@ -96,3 +96,8 @@
   justify-content: space-around;
   padding: 0px 10px;
 }
+
+.item-dot { 
+  color: rebeccapurple; 
+  transform: scale(0.5);
+}
