@@ -57,11 +57,12 @@ const AddProject: React.FC<AddProjectProps> = (props: AddProjectProps) => {
   return (
     <Modal open={open} onClose={closeHandler}>
       <div style={modalStyle} className={classes.paper}>
-        <Typography variant="h6"> Add new </Typography>
+        <Typography variant="h6"> Add new Project </Typography>
         <TextField label="Name" value={value} onChange={handleChange} variant="outlined" /> <br />
         <Button
-          className="AddProject-save-btn"
+          className={'AddProject-save-btn'}
           variant="contained"
+          disabled={value === ''}
           onClick={() => {
             saveHandler(value);
           }}
