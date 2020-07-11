@@ -59,8 +59,40 @@
   font-size: 50px;
 }
 
-.item-dot {
-  display: inline;
-  color: orange;
-  border-radius: 50%;
+.Todo-container {
+  padding: 40px 0 !important;
+}
+
+.Todo-header {
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.Todo-add {
+  background-color: rebeccapurple !important;
+  color: white !important;
+  transform: scale(0.7);
+  transition: all 0.3s ease !important;
+}
+
+.Todo-add:hover {
+  transform: scale(0.8);
+}
+
+.Todo-subtitle {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transform: translate(70px, 60px);
+}
+
+.Todo-header-container {
+  padding: 20px 0px;
+  transform: translateY( -120%);
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 10px;
 }
