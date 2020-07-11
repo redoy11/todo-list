@@ -3,23 +3,26 @@ import SortableTree from 'react-sortable-tree';
 import './Todo.css';
 import { Paper, Container, Typography, IconButton, Icon } from '@material-ui/core';
 import AddProject from '../AddProject/AddProject';
+import { Store } from 'redux';
+import { getTdItems, setItems } from '../../store/ducks/tdItems';
+import { connect } from 'react-redux';
 
 export interface FlexObj {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
-const INITIAL_TODO_ITEMS: FlexObj[] = [
-  { title: 'Chicken', children: [{ title: 'Egg' }] },
-  { title: 'Fish', children: [{ title: 'fingerline' }] },
-];
+export interface TodoPros {
+  todoList: FlexObj[];
+  setItemsActionCreator: typeof setItems;
+}
 
-const Todo: React.FC = () => {
-  const [todoList, setTodoList] = React.useState<FlexObj[]>(INITIAL_TODO_ITEMS);
+const Todo: React.FC<TodoPros> = (props: TodoPros) => {
+  const { todoList, setItemsActionCreator } = props;
   const [open, setOpen] = React.useState(false);
-  const treeOnChangeHandler = (treeData: FlexObj[]) => setTodoList(treeData);
+  const treeOnChangeHandler = (treeData: FlexObj[]) => setItemsActionCreator(treeData);
   const saveHandler = (name: string) => {
-    setTodoList([...todoList, { title: name, children: [] }]);
+    setItemsActionCreator([...todoList, { title: name, children: [] }]);
     setOpen(false);
   };
   const openHandler = () => {
@@ -44,6 +47,13 @@ const Todo: React.FC = () => {
           <IconButton className="Todo-add" onClick={openHandler}>
             <Icon>add</Icon>
           </IconButton>
+          {todoList.length === 0 && (
+            <div className="Todo-empty-list">
+              <Typography variant="subtitle1" color="secondary">
+                List is empty. Please add to see items on list.
+              </Typography>
+            </div>
+          )}
         </div>
         <div className="Todo-body">
           <SortableTree
@@ -69,4 +79,27 @@ const Todo: React.FC = () => {
   );
 };
 
-export default Todo;
+/** connect the component to the store */
+
+/** Interface to describe props from mapStateToProps */
+interface DispatchedStateProps {
+  todoList: FlexObj[];
+}
+
+/** Map props to state  */
+const mapStateToProps = (state: Partial<Store>): DispatchedStateProps => {
+  const result = {
+    todoList: getTdItems(state),
+  };
+  return result;
+};
+
+/** map props to actions */
+const mapDispatchToProps = {
+  setItemsActionCreator: setItems,
+};
+
+/** connect App to the redux store */
+const ConnectedTodo = connect(mapStateToProps, mapDispatchToProps)(Todo);
+
+export default ConnectedTodo;

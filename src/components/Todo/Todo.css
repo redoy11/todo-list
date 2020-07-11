@@ -101,3 +101,10 @@
   color: rebeccapurple; 
   transform: scale(0.5);
 }
+
+.Todo-empty-list {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transform: translate(70px, 100px);
+}
