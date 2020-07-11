@@ -11,11 +11,17 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.9",
+    "@types/seamless-immutable": "^7.1.13",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
     "react-sortable-tree": "^2.7.1",
     "react-sortable-tree-theme-minimal": "^0.0.14",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "seamless-immutable": "^7.1.4",
     "typescript": "~3.7.2"
   },
   "scripts": {
