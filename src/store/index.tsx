@@ -7,7 +7,7 @@ import tdItems, { reducerName as tdItemsReducer } from './ducks/tdItems';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const defaultReducers: any = {};
 
-/** Add session reducer to registry */
+/** Add tdItems reducer to registry */
 defaultReducers[tdItemsReducer] = tdItems;
 
 /** Create reducers from default reducers obj */
