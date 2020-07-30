@@ -1,8 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Todo List
 
-## Available Scripts
+This is a small project (limited in terms of  features). Mostly, it can be regarded as an **example** on how I setup my usual apps and how I like to use the redux store.
 
-In the project directory, you can run:
+The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Example
+**Live demo** can be found [here](https://redoy11.github.io/todo-list/).
+
+### Small Things to note
+
+* [Material-UI](https://material-ui.com/) is used (though I override some styles using raw `CSS`). I prefer overriding with raw `CSS` than using the recommended `jsx styles`.
+* [Redux](https://redux.js.org/) and [React-Redux](https://react-redux.js.org/) with some form of Ducks pattern is followed.
+* Drag and Drop list is implemented using [react-sortable-tree](https://github.com/frontend-collective/react-sortable-tree)
+
+
+## Setup
+
+First, clone the repository using `git`.
+
+```
+git clone https://github.com/redoy11/todo-list.git
+```
+Move to the project directory.
+
+```
+cd [path/project-directory/]
+```
+
+Install dependencies using `yarn` (or `npm` if you prefer).
+
+```
+yarn # or npm install
+```
+
+
+## Commands
+
+>Commands need to be run from the project directory.
 
 ### `yarn start`
 
@@ -12,33 +46,28 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `yarn lint`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Fixes `eslint` issues that can be automatically fixed. 
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production to the `build` folder.
 
 ### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For details, see [cra-eject-command](https://create-react-app.dev/docs/available-scripts).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `yarn test` **(outdated)**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Unit Tests with updated components not added yet. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `yarn-deploy`
 
-## Learn More
+Deploys a production build of app to `gh-pages`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgement
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Special thanks to all the people who have contributed to develop the dependencies, libraries, tools, etc that have used in this repo.
+
+
