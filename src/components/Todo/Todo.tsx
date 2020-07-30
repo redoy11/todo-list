@@ -44,7 +44,7 @@ const Todo: React.FC<TodoProps> = (props: TodoProps) => {
             </Typography>
           </div>
           <div className="Todo-header">
-            <Typography variant="h6"> Your Projects </Typography>
+            <Typography variant="h6"> Your Task List </Typography>
           </div>
           <IconButton className="Todo-add" onClick={openHandler}>
             <Icon>add</Icon>
