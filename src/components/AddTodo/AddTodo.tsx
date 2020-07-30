@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Modal, TextField, Typography, Button, Paper } from '@material-ui/core';
 import './AddTodo.css';
 
+/** inteface for AddTodo props */
 interface AddTodoProps {
   closeHandler: () => void;
   saveHandler: (name: string) => void;
