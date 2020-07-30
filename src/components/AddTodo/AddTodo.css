@@ -1,10 +1,10 @@
-.AddProject-save-btn {
+.AddTodo-save-btn {
   width: 100px;
   background: rebeccapurple !important;
   color: white !important;
 }
 
-.AddProject-modal-container {
+.AddTodo-modal-container {
   outline: 0;
   position: absolute;
   width: 500px;
@@ -28,6 +28,6 @@
   border-color: rebeccapurple !important;
 }
 
-.AddProject-modal-container h6 {
+.AddTodo-modal-container h6 {
   color: rebeccapurple;
 }

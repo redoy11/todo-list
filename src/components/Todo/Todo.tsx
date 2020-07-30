@@ -1,11 +1,11 @@
 import * as React from 'react';
 import SortableTree from 'react-sortable-tree';
-import './Todo.css';
 import { Paper, Container, Typography, IconButton, Icon } from '@material-ui/core';
-import AddProject from '../AddProject/AddProject';
+import AddTodo from '../AddTodo/AddTodo';
 import { Store } from 'redux';
 import { getTdItems, setItems } from '../../store/ducks/tdItems';
 import { connect } from 'react-redux';
+import './Todo.css';
 
 /** inteface for flexible object */
 export interface FlexObj {
@@ -35,7 +35,7 @@ const Todo: React.FC<TodoProps> = (props: TodoProps) => {
   };
   return (
     <React.Fragment>
-      <AddProject open={open} closeHandler={closeHandler} saveHandler={saveHandler} />
+      <AddTodo open={open} closeHandler={closeHandler} saveHandler={saveHandler} />
       <Container className="Todo-container" maxWidth="sm" component={Paper}>
         <div className="Todo-header-container">
           <div className="Todo-subtitle">

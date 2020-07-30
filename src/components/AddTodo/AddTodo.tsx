@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { Modal, TextField, Typography, Button, Paper } from '@material-ui/core';
-import './AddProject.css';
+import './AddTodo.css';
 
-interface AddProjectProps {
+interface AddTodoProps {
   closeHandler: () => void;
   saveHandler: (name: string) => void;
   open: boolean;
 }
 
-const AddProject: React.FC<AddProjectProps> = (props: AddProjectProps) => {
+const AddTodo: React.FC<AddTodoProps> = (props: AddTodoProps) => {
   const { open, closeHandler, saveHandler } = props;
   const [value, setValue] = React.useState<string>('');
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,11 +19,11 @@ const AddProject: React.FC<AddProjectProps> = (props: AddProjectProps) => {
   }, [open]);
   return (
     <Modal open={open} onClose={closeHandler}>
-      <Paper className="AddProject-modal-container">
+      <Paper className="AddTodo-modal-container">
         <Typography variant="h6"> Add new Project </Typography>
         <TextField label="Name" value={value} onChange={handleChange} variant="outlined" /> <br />
         <Button
-          className="AddProject-save-btn"
+          className="AddTodo-save-btn"
           variant="contained"
           disabled={value === ''}
           onClick={() => {
@@ -37,4 +37,4 @@ const AddProject: React.FC<AddProjectProps> = (props: AddProjectProps) => {
   );
 };
 
-export default AddProject;
+export default AddTodo;
