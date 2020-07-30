@@ -20,8 +20,10 @@ const AddTodo: React.FC<AddTodoProps> = (props: AddTodoProps) => {
   return (
     <Modal open={open} onClose={closeHandler}>
       <Paper className="AddTodo-modal-container">
-        <Typography variant="h6"> Add new Project </Typography>
-        <TextField label="Name" value={value} onChange={handleChange} variant="outlined" /> <br />
+        <Typography variant="h6" color="textPrimary">
+          New
+        </Typography>
+        <TextField label="Task" value={value} onChange={handleChange} variant="outlined" /> <br />
         <Button
           className="AddTodo-save-btn"
           variant="contained"

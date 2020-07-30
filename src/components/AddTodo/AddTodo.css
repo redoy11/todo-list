@@ -7,7 +7,7 @@
 .AddTodo-modal-container {
   outline: 0;
   position: absolute;
-  width: 500px;
+  width: 400px;
   height: 200px;
   background-color: white;
   padding: 20px 50px;
@@ -20,7 +20,7 @@
   transform: translate(-50%, -50%);
 }
 
-.Mui-focused {
+.MuiFormLabel-root.Mui-focused {
   color: rebeccapurple !important;
 }
 
@@ -29,5 +29,5 @@
 }
 
 .AddTodo-modal-container h6 {
-  color: rebeccapurple;
+  padding-bottom: 30px;
 }
