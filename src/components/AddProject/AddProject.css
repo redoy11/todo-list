@@ -3,3 +3,31 @@
   background: rebeccapurple !important;
   color: white !important;
 }
+
+.AddProject-modal-container {
+  outline: 0;
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  background-color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  color: rebeccapurple;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Mui-focused {
+  color: rebeccapurple !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: rebeccapurple !important;
+}
+
+.AddProject-modal-container h6 {
+  color: rebeccapurple;
+}
