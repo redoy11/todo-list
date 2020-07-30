@@ -40,7 +40,7 @@ const Todo: React.FC<TodoProps> = (props: TodoProps) => {
         <div className="Todo-header-container">
           <div className="Todo-subtitle">
             <Typography variant="subtitle1" color="textSecondary">
-              Current List
+              Hover and drag to rearrange items in list.
             </Typography>
           </div>
           <div className="Todo-header">
