@@ -12,12 +12,12 @@ export interface FlexObj {
   [key: string]: any;
 }
 
-export interface TodoPros {
+export interface TodoProps {
   todoList: FlexObj[];
   setItemsActionCreator: typeof setItems;
 }
 
-const Todo: React.FC<TodoPros> = (props: TodoPros) => {
+const Todo: React.FC<TodoProps> = (props: TodoProps) => {
   const { todoList, setItemsActionCreator } = props;
   const [open, setOpen] = React.useState(false);
   const treeOnChangeHandler = (treeData: FlexObj[]) => setItemsActionCreator(treeData);
