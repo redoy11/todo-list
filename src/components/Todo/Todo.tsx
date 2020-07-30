@@ -7,11 +7,13 @@ import { Store } from 'redux';
 import { getTdItems, setItems } from '../../store/ducks/tdItems';
 import { connect } from 'react-redux';
 
+/** inteface for flexible object */
 export interface FlexObj {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
+/** inteface for Todo component props */
 export interface TodoProps {
   todoList: FlexObj[];
   setItemsActionCreator: typeof setItems;
